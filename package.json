@@ -1,0 +1,14 @@
+{
+  "name": "studio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:nerik/studio.git",
+  "author": "Erik Escoffier <me@erik.nz>",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "1.2.1"
+  },
+  "scripts": {
+    "start": "live-server --no-browser --port=9876"
+  }
+}
