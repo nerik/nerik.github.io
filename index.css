@@ -72,11 +72,6 @@ header, footer {
   height: auto;
 }
 
-header strong {
-  float: left;
-
-}
-
 header img {
   height: 5rem;
   border-radius: 99px;
