@@ -38,9 +38,10 @@
   <main>
     <header>
       <section>
+
         <h1>
-          <span>interactive maps, data-driven experiences, and information design</span>
-          <span>erik escoffier⨳</span>
+          <strong>erik escoffier <img src="img/erik.webp" alt="Erik Escoffier"></strong>
+          <span>interactive maps, data-driven experiences, and information design ⨳</span>
         </h1>
         <p>
           I am a front-end engineer with 10 years of specialised experience in maps and data visualisation. </p>
@@ -56,16 +57,16 @@
     </header>
     <section>
       <h2>
-        ⨳ featured projects
+        featured projects
       </h2>
       <!-- <dt>Ember</dt>
   <dd></dd> -->
       <!-- <dt>Earth Genome: Food Twin</dt>
 <dd></dd> -->
       <article>
-        <h3>Our Forests Tomorrow</h3>
+        <h3>Our Forests Tomorrow <span>Development Seed</span></h3>
         <video muted loop preload="auto" poster="./img/projects/oft.jpeg">
-          <source src="./img/projects/oft.jpeg" type="video/webm">
+          <source src="./img/projects/oft.mp4" type="video/webm">
         </video>
 
         <p>EU-Trees4F is a study examining the potential future of 67 distinct tree species across Europe according to
@@ -80,7 +81,7 @@
       </article>
 
       <article>
-        <h3>GlobalFishingWatch</h3>
+        <h3>GlobalFishingWatch map <span>GlobalFishingWatch</span></h3>
         <video muted loop preload="auto" poster="./img/projects/gfw.jpeg">
           <source src="./img/projects/gfw.mp4" type="video/webm">
         </video>
@@ -96,13 +97,14 @@
       </article>
 
       <article>
-        <h3>Google Arts and Culture: An Ocean of Books</h3>
+        <h3>An Ocean of Books <span>Google Arts and Culture</span></h3>
         <video muted loop preload="auto" poster="./img/projects/books.jpeg">
           <source src="./img/projects/books.mp4" type="video/webm">
         </video>
 
         <p>When I was part of the <a href="https://satellitestud.io/">Satellite Studio</a> collective, Google Arts &
-          Culture commissioned us to explore a 2-dimensional dataset produced out of about 150,000 books, based on their
+          Culture commissioned us to explore a two-dimensional dataset produced out of about 150,000 books, based on
+          their
           relationship on the web. We ideated, designed and engineered an explorable gigantic map of authors and books.
           This map was built with Mapbox GL, and a lot of time spent behind the scenes to generate a massive realistic
           geography out of thin air, using QGIS, tippecanoe, and tilereduce.<a
@@ -137,10 +139,12 @@
       <article>
         <img src="img/logos/earth_genome.svg">
         <img src="img/logos/gfw.png">
-        <img src="img/logos/google.svg">
+        <img src="img/logos/google.svg" style="height: 2rem;">
         <img src="img/logos/pew.svg">
-        <img src="img/logos/enveritas.png">
-        <img src="img/logos/sei.svg">
+        <img src="img/logos/enveritas.png" style="opacity: .7;">
+        <img src="img/logos/sei.svg" style="height: 4rem;">
+        <img src="img/logos/devseed.svg" style="opacity: .8;">
+        <img src="img/logos/nasa.png" style="opacity: .8;height: 4rem;">
       </article>
       <!-- Just a bunch of logos:
   GFW
@@ -164,21 +168,44 @@ Gael GA&C?
 
 </section> -->
 
-    <section>
-      <h2>get in touch!</h2>
+    <!-- <section>
+      <h2>my expertise</h2>
 
       <article>
-        <!-- <p>I am currently available for freelance work and open to long term contracts.</p> -->
         <p>
-          Get in touch with me and let's talk about your project(s): <a
-            href="mailto:erik.escoffier@gmail.com">erik.escoffier@gmail.com</a>
+          sdasd
         </p>
       </article>
-    </section>
+    </section> -->
+
   </main>
 
   <footer>
-    <h2>Social</h2>
+    <section>
+      <h2><span>get in touch!</span></h2>
+
+
+      <!-- <p>I am currently available for freelance work and open to long term contracts.</p> -->
+      <p>
+        Get in touch with me and let's talk about your project(s): <a
+          href="mailto:erik.escoffier@gmail.com">erik.escoffier@gmail.com</a>
+      </p>
+      <p>
+        Or find me on
+
+        <a href="//twitter.com/nerik">Twitter</a>
+
+        <a href="//www.linkedin.com/in/erikescoffier/">LinkedIn</a>
+        <a href="https://github.com/nerik">Github</a>
+      </p>
+
+      <p>Do you need <a href="./Resume Erik Escoffier.pdf">a resume</a> ?</p>
+
+    </section>
+
+
+
+    <!-- <h2>Social</h2>
     <ul>
       <li>
         <a href="//twitter.com/nerik">Twitter</a>
@@ -186,7 +213,7 @@ Gael GA&C?
       <li><a href="//www.linkedin.com/in/erikescoffier/">LinkedIn</a></li>
       <li><a href="https://github.com/nerik">Github</a></li>
     </ul>
-    </div>
+    </div> -->
   </footer>
 
 
@@ -202,6 +229,7 @@ Gael GA&C?
     });
   </script> -->
   <script>
+
     let videos = document.querySelectorAll('video');
     videos.forEach(video => {
       video.addEventListener('mouseover', () => {
@@ -212,45 +240,6 @@ Gael GA&C?
       })
     })
 
-    let title1 = document.querySelector('h1 span:nth-child(1)');
-    let title2 = document.querySelector('h1 span:nth-child(2)');
-    let start, previousTimeStamp;
-
-    let title1Content = title1.innerHTML;
-    let title1Steps = [];
-    for (let index = 0; index < title1Content.length - 1; index++) {
-      let num = title1Content.length - 2 - index;
-      title1Steps.push([
-        title1Content.slice(0, 1),
-        title1Content.slice(1, 1 + index),
-        num || '',
-        title1Content.slice(-1),
-        index % 2 === 0 ? '|' : ''
-      ].join(''))
-    }
-
-    console.log(title1Steps)
-
-    setTimeout(() => {
-      function step(timeStamp) {
-        if (start === undefined) {
-          start = timeStamp;
-        }
-        const elapsed = timeStamp - start;
-        previousTimeStamp = timeStamp;
-        let f = Math.floor(elapsed / 30);
-        title1.innerHTML = title1Steps[f];
-
-        if (title1Steps[f+1]) {
-          window.requestAnimationFrame(step);
-        } else {
-          document.body.classList.remove('anim');
-        }
-      }
-      window.requestAnimationFrame(step);
-
-    }, 500)
-    title1.innerHTML = title1Steps[0];
   </script>
 </body>
 
