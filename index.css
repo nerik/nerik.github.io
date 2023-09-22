@@ -1,15 +1,9 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300;0,700;1,300&display=swap'); */
 @import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap");
 
 :root {
-  /* --floral-white: hsla(42, 100%, 97%, 1);
-  --alice-blue: hsla(199, 61%, 93%, 1);
-  --prussian-blue: hsla(200, 95%, 14%, 1);
-  --prussian-blue-faded: hsla(200, 95%, 14%, .4);
-  --selective-yellow: hsla(43, 100%, 51%, 1);
-  --ut-orange: hsla(32, 100%, 49%, 1);  */
   --cobalt: #023047;
+  --cobalt-50: #02304780;
   --carbon: #333333;
   --aquamarine: #7fffd4;
   --green: #80ff80;
@@ -17,6 +11,7 @@
   --intenseblue: #018aa0;
   --bg: white;
   --fg: var(--cobalt);
+  --fg-50: var(--cobalt-50);
   --brand1: var(--aquamarine);
   --brand2: var(--green);
   --brand3: var(--intenseblue);
@@ -48,18 +43,6 @@ nav {
   backdrop-filter: blur(50px);
   display: none;
 }
-/* 
-#map {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100%;
-  z-index: 0;
-} */
-
-/* main, footer {
-  position: relative;
-} */
 
 main {
 }
@@ -177,7 +160,8 @@ article > *:not(video) {
 
 video {
   width: 100%;
-  box-shadow: 0 0 10px var(--fg);
+  box-shadow: 0 0 10px var(--fg-50);
+  border-radius: 5px;
 }
 
 article img {
