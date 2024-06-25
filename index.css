@@ -15,6 +15,23 @@
   --brand1: var(--aquamarine);
   --brand2: var(--green);
   --brand3: var(--intenseblue);
+  --fs-0: 5rem;
+  --fs-1: 4.5rem;
+  --fs-2: 3.5rem;
+  --fs-3: 2.5rem;
+  --fs-4: 1.6rem;
+  --fs-5: 1.1rem;
+}
+
+@media (width <= 1024px) {
+  :root {
+    --fs-0: 8rem;
+    --fs-1: 6rem;
+    --fs-2: 5rem;
+    --fs-3: 5rem;
+    --fs-4: 4rem;
+    --fs-5: 2rem;
+  }
 }
 
 h1,
@@ -31,7 +48,6 @@ body {
   background: var(--bg);
   color: var(--fg);
   font-family: "Lora", serif;
-
 }
 
 nav {
@@ -68,21 +84,37 @@ footer {
 
 section {
   max-width: 1024px;
-  width: 70vw;
-  margin: 8rem auto;
+  /* width: 70vw; */
+  margin: 8rem;
 }
+
 
 h1 {
   /* color: var(--brand1); */
   font-weight: 300;
-  font-size: 4.5rem;
+  font-size: var(--fs-1);
   /* line-height: 4rem; */
   margin: 0 0 4rem 0;
 }
 
+h1 > span {
+  line-height: 1em;
+}
+
+h1 > strong {
+  font-weight: normal;
+  font-size: var(--fs-0);
+  line-height: 1em;
+  /* color: var(--brand2);
+  font-style: normal;
+  font-size: 4rem;
+  display: block;
+  font-weight: 700; */
+}
+
 h1 > *,
 footer h2 {
-  font-size: 3.5rem;
+  font-size: var(--fs-2);
   display: block;
   background-image: linear-gradient(90deg, var(--brand1), var(--brand2));
   background-size: 100%;
@@ -95,19 +127,6 @@ footer h2 {
   margin-top: 2.4rem;
 }
 
-h1 > span {
-  line-height: 3.5rem;
-}
-
-h1 > strong {
-  font-weight: normal;
-  font-size: 5rem;
-  /* color: var(--brand2);
-  font-style: normal;
-  font-size: 4rem;
-  display: block;
-  font-weight: 700; */
-}
 
 h2 {
   background-image: linear-gradient(90deg, var(--brand3), var(--fg));
@@ -118,8 +137,8 @@ h2 {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
-  font-size: 2.5rem !important;
-  line-height: 2.8rem;
+  font-size: var(--fs-3) !important;
+  line-height: 1.1em;
 }
 
 h2::before {
@@ -133,10 +152,11 @@ h2::before {
 
 h3 {
   font-weight: 300;
-  font-size: 1.6rem;
+  font-size: var(--fs-4);
   margin: 0 0 0.7rem 0;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
+  line-height: 1.2em;
 }
 
 h3 > span {
@@ -151,6 +171,15 @@ article {
   /* border-left: 5px solid var(--brand1); */
   /* backdrop-filter: blur(6px) brightness(104%); */
   /* filter: drop-shadow(4px 4px 10px var(--fg)) */
+}
+
+@media (width <= 1024px) {
+  section { 
+    margin: 5rem;
+  }
+  article {
+    margin: 5rem 0 8rem;
+  }
 }
 
 article > *:not(video) {
@@ -170,8 +199,8 @@ article img {
 }
 
 p {
-  font-size: 1.1rem;
-  line-height: 2rem;
+  font-size: var(--fs-5);
+  line-height: 2.4em;
 }
 
 a {
